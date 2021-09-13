@@ -1,0 +1,40 @@
+@mixin clearfix {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+  
+  @mixin flex-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // scss-docs-start spacer-variables-maps
+$spacer: 1rem !default;
+$spacer-px: 0.0625rem;
+$spacers: (
+  0: 0,
+  5: $spacer-px * 5,
+  10: $spacer-px * 10,
+  15: $spacer-px * 15,
+  20: $spacer-px * 20,
+  25: $spacer-px * 25,
+  30: $spacer-px * 30,
+  35: $spacer-px * 35,
+  40: $spacer-px * 40,
+  45: $spacer-px * 45,
+  50: $spacer-px * 50,
+  55: $spacer-px * 55,
+  60: $spacer-px * 60,
+  65: $spacer-px * 65,
+  70: $spacer-px * 70,
+  75: $spacer-px * 75,
+  80: $spacer-px * 80,
+  85: $spacer-px * 85,
+  90: $spacer-px * 90,
+  95: $spacer-px * 95,
+  100: $spacer-px * 100
+) !default;
