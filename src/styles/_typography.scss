@@ -1,11 +1,24 @@
+@import 'colors';
 // Typography
 //
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../assets//fonts/ProximaNovaFont.otf") format("otf")
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../assets//fonts/OpenSans-Regular.ttf") format("otf")
+}
+
 // Font, line-height, and color for body text, headings, and more.
 $variable-prefix:             bs- !default;
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif:    -apple-system, system-ui, "ProximaNova" , "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-monospace:      -apple-system, system-ui, "ProximaNova" , "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-secondary:      -apple-system, system-ui, "OpenSans" , "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$variable-prefix}font-sans-serif) !default;
 $font-family-code:            var(--#{$variable-prefix}font-monospace) !default;
@@ -29,12 +42,12 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
+$h1-font-size:                $font-size-base * 3 !default;
+$h2-font-size:                $font-size-base * 2.25 !default;
+$h3-font-size:                $font-size-base * 1.875 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h5-font-size:                $font-size-base * 1.125 !default;
+$h6-font-size:                $font-size-base * 0.875 !default;
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -49,12 +62,12 @@ $font-sizes: (
 // scss-docs-end font-sizes
 $spacer: 1rem !default;
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5 !default;
+$headings-margin-bottom:      0 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
+$headings-font-weight:        700 !default;
 $headings-line-height:        1.2 !default;
-$headings-color:              null !default;
+$headings-color:              $gray-900 !default;
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings
@@ -72,7 +85,7 @@ $display-line-height: $headings-line-height !default;
 // scss-docs-end display-headings
 
 // scss-docs-start type-variables
-$lead-font-size:              $font-size-base * 1.25 !default;
+$lead-font-size:              $font-size-base * 0.875 !default;
 $lead-font-weight:            300 !default;
 
 $small-font-size:             .875em !default;
@@ -87,3 +100,13 @@ $blockquote-margin-y:         $spacer !default;
 $blockquote-font-size:        $font-size-base * 1.25 !default;
 $blockquote-footer-color:     $gray-600 !default;
 $blockquote-footer-font-size: $small-font-size !default;
+
+$paragraph-margin-bottom:   0 !default;
+
+p{
+  font-family:"OpenSans", Arial;
+}
+
+h1,h2,h3,h4,h5,h6,button{
+  font-family:"ProximaNova", sans-serif;
+}
